@@ -4,44 +4,47 @@
 <head>
   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/vue-resource@1.5.1"></script>
+  <link rel="stylesheet" href="build/tailwind.css">
   <link rel="icon" href="favicon.png" type="image/x-icon" />
   <link rel="stylesheet" type="text/css" href="css/font-awesome.css">
-  <link rel="stylesheet" type="text/css" href="css/index.css">
+  <!-- <link rel="stylesheet" type="text/css" href="css/index.css"> -->
   <title> Cybersage.eth | web 3 designer </title>
 </head>
 
 <!------------ Sidebar -------------->
 <body>
-<div id="app">
-  <div id="column-1">
-    <h1 class="page-title"><a href=".">Cybersage.eth</a> </h1>
-      <input type="text" v-model='search' id="searchbar" name="search" value="">
-  </div>
+<div id="app" class="bg-black min-h-screen">
+    <h1 class="page-title text-5xl text-orange-300"><a href=".">Cybersage.eth</a> </h1>
 
-<!------------ Add new link -------------->
-    <div id="submit-form" v-if='show'>
-      <div id="input-container">
-        <input class="half-input" type="text" v-model="newlinkname" placeholder="name">
-        <input class="half-input" type="text" v-model="newlinkurl" placeholder="url">
-        <input type="text" v-model="newlinkdescription" placeholder="description">
-      </div>
-      <div id="submit-div" >
-        <button id='submit-button' v-on:click.prevent="addLink()">Submit</button>
-      </div>
-    </div>
 
 <!-------------- Main Content: Bookmarks -------------->
-<div id="column-2">
-  <ul >
-    <li class="bookmark-item" v-for="asset in this.nfts.assets">
+<div>
+  <ul class="flex flex-wrap">
+     <!-- <li class=" m-4 text-center inline w-64 overflow-hidden  border border-orange-500 rounded-lg" v-for="asset in this.nfts">
+        <img class="w-64 h-64" v-bind:src=asset.image_url>
+        <h3 class="text-3xl text-orange-300"> {{asset.name}}</h3>
+      <p class="link-description text-orange-300"> {{asset.description}} </p> 
 
-      <a v-else v-bind:href=asset.hyperlink target=_blank rel="noopener noreferrer" class="link-title">
-        {{asset.name}}</a>
-        <img v-bind:src=asset.image_url>
-      <p class="link-description"> {{asset.description}} </p> 
+    </li>  -->
 
-    </li>
-  </ul>
+    <li class="p-3 m-4 inline w-3/12 overflow-hidden  border border-orange-500 rounded-lg">
+      <img class="w-64 mb-3" v-bind:src=this.hedra.image_url>
+      <h3 class="text-left inline-block w-5/12 text-orange-100 text-xl">{{this.hedra.name}}</h3>
+      <h3 class="text-right inline-block w-6/12 text-orange-100 text-xl">12 ETH</h3>
+  </li> 
+  <li class="p-3 m-4 inline w-3/12 overflow-hidden  border border-orange-500 rounded-lg">
+    <img class="w-64 mb-3" v-bind:src=this.ghost.image_url>
+    <h3 class="text-left inline-block w-5/12 text-orange-100 text-xl">{{this.ghost.name}}</h3>
+    <h3 class="text-right inline-block w-6/12 text-orange-100 text-xl">12 ETH</h3>
+</li>
+<li class="p-3 m-4 inline w-3/12 overflow-hidden  border border-orange-500 rounded-lg">
+  <img class="w-64 mb-3" v-bind:src=this.urbit.image_url>
+  <h3 class="text-left inline-block w-5/12 text-orange-100 text-xl">{{this.urbit.name}}</h3>
+  <h3 class="text-right inline-block w-6/12 text-orange-100 text-xl">12 ETH</h3> 
+</li> 
+<img src="http://wttr.in/moon.png">
+  
+    </ul>
 </div>
 </div>
 <script src="js/index.js"></script>

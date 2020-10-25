@@ -1,0 +1,27 @@
+{
+  "name": "solarcyber",
+  "version": "1.0.0",
+  "description": "The Roots Network is an informationally dense, no bs system for organizing, saving, and sharing hyperlinks. The goal is to share great value in the simplest form.",
+  "main": "postcss.config.js",
+  "dependencies": {
+    "autoprefixer": "^10.0.1",
+    "postcss": "^8.1.4",
+    "postcss-cli": "^8.1.0",
+    "tailwindcss": "^1.9.6"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "build": "postcss css/tailwind.css -o build/tailwind.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Plants-Finance/Roots-Network.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Plants-Finance/Roots-Network/issues"
+  },
+  "homepage": "https://github.com/Plants-Finance/Roots-Network#readme"
+}
