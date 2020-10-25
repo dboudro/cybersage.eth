@@ -8,6 +8,7 @@ var app = new Vue({
     newlinkdescription: "",
     globaltaglist: ["test"],
     search: "",
+    nfts: "",
     bookmarks: [
       {
         text: "Material Design Dev Tutorials",
@@ -60,25 +61,13 @@ var app = new Vue({
   },
 
   created() {
-    const fetch = require("node-fetch");
-
-    let url = "https://api.opensea.io/api/v1/assets";
-
-    let options = {
-      method: "GET",
-      qs: {
-        owner: "0x92b406851390541F445B7C697014133d4B5BfcE3",
-        order_direction: "desc",
-        offset: "0",
-        limit: "20",
-      },
-    };
-
-    fetch(url, options)
-      .then((res) => res.json())
-      .then((json) => console.log(json))
-      .catch((err) => console.error("error:" + err));
-  },
+    this.$http.get('https://api.opensea.io/api/v1/assets/?owner=0x92b406851390541F445B7C697014133d4B5BfcE3&order_direction=desc&offset=0&limit=20').then(function (data) {
+        return data.json()
+       
+    }).then(function (data) {
+      this.nfts = data;
+    })
+},
   computed: {
     // generate a list of tags and their counts with counts over 10
   },
