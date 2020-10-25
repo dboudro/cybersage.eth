@@ -7,19 +7,15 @@
   <link rel="icon" href="favicon.png" type="image/x-icon" />
   <link rel="stylesheet" type="text/css" href="css/font-awesome.css">
   <link rel="stylesheet" type="text/css" href="css/index.css">
-  <title> Roots Network - Strengthen your connection to the infinite information on the internet </title>
+  <title> Cybersage.eth | web 3 designer </title>
 </head>
 
 <!------------ Sidebar -------------->
 <body>
 <div id="app">
   <div id="column-1">
-    <h1 class="page-title"><a href=".">Roots Network</a> <span id="results-count">{{filteredBookmarks.length}}</span></h1>
+    <h1 class="page-title"><a href=".">Cybersage.eth</a> </h1>
       <input type="text" v-model='search' id="searchbar" name="search" value="">
-    <button class="settings-button" id="new-bookmark-button" v-on:click="toggleShow()"><i class="fas dl fa-bookmark"></i> New</button>
-    <button  class="settings-button" id="config-button" v-on:click="toggleEdit"><i class="far dl fa-edit"></i> Edit
-    </button>
-      <button class="nav-tag" class="globaltagbutton" v-for="item in popularTagsList" v-on:click="tagFilter(item)">{{item.name}}</button> 
   </div>
 
 <!------------ Add new link -------------->
@@ -37,7 +33,7 @@
 <!-------------- Main Content: Bookmarks -------------->
 <div id="column-2">
   <ul >
-    <li class="bookmark-item" v-for="link in filteredBookmarks">
+    <li class="bookmark-item" v-for="link in this.bookmarks">
       <i class="fas fa-times close-icon settings-icons" v-on:click="removeBookmark(link)"></i>
       <i v-if="link.favorited" class="fas fa-star favorite-icon favorite-icon-selected settings-icons" v-on:click="favoriteBookmark(link)"></i>
       <i v-else class="far fa-star favorite-icon settings-icons" v-on:click="favoriteBookmark(link)"></i>
