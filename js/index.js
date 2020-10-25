@@ -9,29 +9,7 @@ var app = new Vue({
     globaltaglist: ["test"],
     search: "",
     nfts: "",
-    bookmarks: [
-      {
-        text: "Material Design Dev Tutorials",
-        hyperlink: "https://material.io/collections/developer-tutorials/",
-        description:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vel lectus ut turpis fermentum vestibulum. ",
-        taglist: ["testing", "tag2"],
-        newtag: "",
-        favorited: false,
-        lastlocation: -1,
-      },
-
-      {
-        text: "JSON Placeholder API",
-        hyperlink: "https://jsonplaceholder.typicode.com/",
-        description:
-          "A fake online REST API tool for prototyping / testing simple http requests",
-        taglist: ["testing", "tag2"],
-        newtag: "",
-        favorited: false,
-        lastlocation: -1,
-      },
-    ],
+  
   },
   methods: {
     put: function (link) {

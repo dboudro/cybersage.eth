@@ -391,7 +391,7 @@ $color5: rgba(233, 188, 183, 1);
   overflow: scroll;
 }
 .bookmark-item {
-  height: 120px;
+  height: 420px;
   border: 1px solid #dddddd;
   box-shadow: 0 15px 18px 0 rgba(0, 0, 0, 0.01), 0 5px 15px 0 rgba(0, 0, 0, 0.01);
   transition: ease-in box-shadow .12s;

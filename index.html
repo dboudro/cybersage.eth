@@ -35,18 +35,6 @@
   <ul >
     <li class="bookmark-item" v-for="asset in this.nfts.assets">
 
-      <div v-if="editable">
-        <small><a v-bind:href=asset.name >{{asset.name}}</a></small>
-        <small>title:</small>
-        <input class="edit-input" v-model="asset.text">
-        <br>
-        <small>description:</small>
-        <input class="edit-input" v-model="asset.description">
-        <br> 
-        <small>tag:</small>
-        <input class="edit-input" style="width: 80px" v-model="asset.newtag"> 
-        <button id="new-tag" v-on:click="addTag(link)"><i class="far dl fa-plus-square"></i></button>
-      </div>
       <a v-else v-bind:href=asset.hyperlink target=_blank rel="noopener noreferrer" class="link-title">
         {{asset.name}}</a>
         <img v-bind:src=asset.image_url>
