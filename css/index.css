@@ -8,3 +8,15 @@ font-style: normal;
 font-weight: 700;
 font-style: normal;
 }
+
+.cybersage {
+  background: -webkit-linear-gradient(#) !important;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.cyber {
+  background: linear-gradient(#C76903, #6218BA);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
