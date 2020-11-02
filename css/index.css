@@ -20,3 +20,31 @@ font-style: normal;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
+/* Extended Font H1, H2 */
+.aktiv-ex {
+  font-family: aktiv-grotesk-extended,sans-serif;
+font-weight: 400;
+font-style: normal;
+}
+.aktiv-ex-700 {
+  font-family: aktiv-grotesk-extended,sans-serif;
+font-weight: 700;
+font-style: normal;
+}
+
+/* Body Text */
+.helvetica {
+  font-family: Helvetica Neue, Helvetica, sans-serif
+}
+
+.aktiv-400 {
+  font-family: aktiv-grotesk,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.aktiv-700 {
+  font-family: aktiv-grotesk,sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
