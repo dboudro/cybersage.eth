@@ -43,7 +43,7 @@ var app = new Vue({
   },
 
   created() {
-    this.$http.get('https://api.opensea.io/api/v1/assets/?owner=0x92b406851390541F445B7C697014133d4B5BfcE3&order_direction=desc&offset=0&limit=20').then(function (data) {
+    this.$http.get('https://api.opensea.io/api/v1/assets/?owner=0x92b406851390541F445B7C697014133d4B5BfcE3&order_direction=desc&offset=0&limit=50').then(function (data) {
         return data.json()
        
       

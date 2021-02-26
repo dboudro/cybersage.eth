@@ -20,6 +20,10 @@ font-style: normal;
   -webkit-text-fill-color: transparent;
 }
 
+.inter {
+  font-family: inter light;
+}
+
 .cyber {
   background: linear-gradient(#C76903, #6218BA);
   -webkit-background-clip: text;
@@ -52,4 +56,9 @@ font-style: normal;
   font-family: aktiv-grotesk,sans-serif;
   font-weight: 700;
   font-style: normal;
+}
+
+body {
+  font-family: inter light;
+  font-weight: 300;
 }
