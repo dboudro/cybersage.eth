@@ -8,7 +8,12 @@ font-style: normal;
 font-weight: 700;
 font-style: normal;
 }
-
+.orbitron-bold {
+  font-family: "Orbitron";
+}
+.orbitron-light {
+  font-family: Orbitron Light;
+}
 .cybersage {
   background: -webkit-linear-gradient(#) !important;
   -webkit-background-clip: text;
